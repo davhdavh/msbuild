@@ -3930,7 +3930,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
     <ItemGroup>
       <IntermediateSatelliteAssembliesWithTargetPath Include="$(IntermediateOutputPath)%(EmbeddedResource.Culture)\$(TargetName).resources.dll"
-                                                     Condition="'%(EmbeddedResource.Culture)' != ''">
+                                                     Condition="'%(EmbeddedResource.Culture)' != '' AND '%(EmbeddedResource.GenerateResource)' != 'false'">
         <Culture>%(EmbeddedResource.Culture)</Culture>
         <TargetPath>%(EmbeddedResource.Culture)\$(TargetName).resources.dll</TargetPath>
       </IntermediateSatelliteAssembliesWithTargetPath>
